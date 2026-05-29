@@ -12,11 +12,11 @@ Current progress: 0/5 exercises completed.
 
 ## Optional Labs
 Current progress: 0/5 exercises completed.
-- ❌ [Deploy an Infrastructure as a Service Solution (IaaS) with Docker Containers](Optional/)
-- ❌ [Use the Docker CLI to Containerize a Simple Web Application](Optional/)
-- ❌ [Setting Up Application Environment using Ansible Playbook](Optional/)
-- ❌ [Refactoring Ansible Playbook to Ansible Roles](Optional/)
-- ❌ [Optimize and Secure Ansible Playbook](Optional/)
+- ❌ [Deploy an Infrastructure as a Service Solution (IaaS) with Docker Containers](https://utbildning.udemy.com/labs/deploy-an-infrastructure-as-a-service-solution-iaas-with-docker-containers/overview/)
+- ❌ [Use the Docker CLI to Containerize a Simple Web Application](https://utbildning.udemy.com/labs/2750/)
+- ❌ [Setting Up Application Environment using Ansible Playbook](https://utbildning.udemy.com/labs/1510/)
+- ❌ [Refactoring Ansible Playbook to Ansible Roles](https://utbildning.udemy.com/labs/1784/)
+- ❌ [Optimize and Secure Ansible Playbook](https://utbildning.udemy.com/labs/1662/)
 
 ## Udemy resources
 - ⭕ [The Complete Bash/Shell Developer Course](https://utbildning.udemy.com/course/the-complete-bashshell-developer-course/learn/lecture/34876048?learning_path_id=11747229#overview)
