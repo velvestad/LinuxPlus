@@ -44,7 +44,7 @@ Working Devices : 3
  1 8 33 1 active sync /dev/sdc1
  2 8 49 2 active sync /dev/sdd1
 ```
-The important lines to see are the **State** line which should say clean otherwise there might be a problem. At the bottom you should make sure that the **State** column always says active syncwhich says each device is actively in the array. You could potentially have a spare device that's on-hand should any drive should fail. If you have a spare you'll see it listed as such here.
+The important lines to see are the **State** line which should say clean otherwise there might be a problem. At the bottom you should make sure that the **State** column always says active sync which says each device is actively in the array. You could potentially have a spare device that's on-hand should any drive should fail. If you have a spare you'll see it listed as such here.
 
 One thing you'll see above if you're paying attention is the fact that the size of the array is 8G but I have three 4G drives as part of the array. That's because the extra space is used as extra parity data that is needed to survive the failure of one of the drives.
 
