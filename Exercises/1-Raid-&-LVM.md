@@ -116,17 +116,18 @@ Filesystem Size Used Avail Use% Mounted on
 ```
 ### Handling a Drive Failure
 As everything eventually does break (some sooner than others) a drive in the array will fail. It is a very good idea to run `smartd` on all drives in your array (and probably ALL drives period) to be notified of a failure or a pending failure as soon as possible.
-To simulate a hard drive error we will remove the SATA data cable from the hard drive on the top in the hard drive bay /dev/sdd.
+To simulate a hard drive error we will remove the SATA data cable from the hard drive on the top in the hard drive bay `/dev/sdd`.
 
 You can also manually fail a partition, meaning to take it out of the RAID array, with the following command:
 ```Bash
-/sbin/mdadm /dev/md0 -f /dev/sdd1 
-mdadm: set /dev/sdd1 faulty in /dev/md0
+/sbin/mdadm /dev/md0 -f /dev/sdd1
 ```
 Once the system has determined a drive has failed or is otherwise missing (you can disconnect the SATA cable from the harddrive on top in the bay to similate a drive failure or use the command above to manually fail a drive).
 Iit will show something like this in mdadm:
 ```Bash
 /sbin/mdadm --detail /dev/md0
+```
+```Bash
 /dev/md0:
  Version : 0.90
  Creation Time : Mon Feb 16 14:51:11 2009
