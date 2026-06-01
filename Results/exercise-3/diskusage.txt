@@ -1,3 +1,14 @@
+Total hard drive usage: 13.24%
+
+Partitions and their sizes:
+sda1                     1G
+sda2                     2G
+ubuntu--vg-ubuntu--lv 28.5G
+└─sda3                56.9G
+lvm--raid-lvm0           2G
+  ├─sdb1              1023M
+  ├─sdc1              1023M
+  └─sdd1              1023M
 #!/bin/bash
 
 # Function declarations
