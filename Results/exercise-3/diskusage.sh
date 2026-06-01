@@ -73,3 +73,8 @@ echo "Partitions and their sizes:" >> ./diskusage.txt
 sed "s/[[:space:]]\+\S\+$//" <(
     lsblk -s --output "NAME,SIZE,TYPE" | egrep "part|lvm"
 ) >> ./diskusage.txt
+
+
+# List disk usage of directories in /home
+echo -e "\nDisk usage of directories in /home:" >> ./diskusage.txt
+du -h --max-depth=0 /home/* >> ./diskusage.txt
