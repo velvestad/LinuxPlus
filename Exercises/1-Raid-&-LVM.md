@@ -54,14 +54,15 @@ Now that we have /dev/md0 device you can create a Logical Volume on top of it. W
 Anyway, here are the steps to then add this RAID array to the LVM system. The first command pvcreate will "initialize a disk or partition for use by LVM". The second command vgcreate will then create the Volume Group, in my case I called it lvm-raid:
 
 ```Bash
-pvcreate /dev/md0 
-```
-(If this command failes, try writing zeros to the raid array with this command as root and the retry the pvcreate command: # dd if=/dev/zero of=/dev/md0 bs=1M count=32)
+pvcreate /dev/md0
 
-```Bash
 vgcreate lvm-raid /dev/md0 
 ```
-Ok, you've created a blank receptacle but now you have to tell how many Physical Extents from the physical device (/dev/md0 in this case) will be allocated to this Volume Group. In my case I wanted all the data from /dev/md0 to be allocated to this Volume Group. If later I wanted to add additional space I would create a new RAID array and add that physical device to this Volume Group.
+If the `pvcreate` command failes, try writing zeros to the raid array with this command as root and the retry the pvcreate command:
+```Bash
+dd if=/dev/zero of=/dev/md0 bs=1M count=32
+```
+Ok, you've created a blank receptacle but now you have to tell how many Physical Extents from the physical device (`/dev/md0` in this case) will be allocated to this Volume Group. In my case I wanted all the data from `/dev/md0` to be allocated to this Volume Group. If later I wanted to add additional space I would create a new RAID array and add that physical device to this Volume Group.
 
 To find out how many PEs are available to me use the vgdisplay command to find out how many are available and now I can create a Logical Volume using all (or some) of the space in the Volume Group. In my case I call the Logical Volume lvm0.
 
