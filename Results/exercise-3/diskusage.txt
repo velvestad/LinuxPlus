@@ -1,4 +1,4 @@
-Total hard drive usage: 13.24%
+Total hard drive usage: 13.27%
 
 Partitions and their sizes:
 sda1                     1G
@@ -9,6 +9,10 @@ lvm--raid-lvm0           2G
   ├─sdb1              1023M
   ├─sdc1              1023M
   └─sdd1              1023M
+
+Disk usage of directories in /home:
+4.0K	/home/shared
+355M	/home/vegeir
 #!/bin/bash
 
 # Function declarations
@@ -84,3 +88,8 @@ echo "Partitions and their sizes:" >> ./diskusage.txt
 sed "s/[[:space:]]\+\S\+$//" <(
     lsblk -s --output "NAME,SIZE,TYPE" | egrep "part|lvm"
 ) >> ./diskusage.txt
+
+
+# List disk usage of directories in /home
+echo -e "\nDisk usage of directories in /home:" >> ./diskusage.txt
+du -h --max-depth=0 /home/* >> ./diskusage.txt
