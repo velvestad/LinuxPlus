@@ -3,7 +3,7 @@
 This repository contains exercises for **Linux+ Certification**.
 
 ## Progress
-Current progress: 0/5 exercises completed.
+Current progress: 5/5 exercises completed.
 - ✔️ [1. Raid & LVM](Exercises/1-Raid-&-LVM.md)
 - ✔️ [2. Use bash commands to find the specified info needed](Exercises/2-Use-bash-commands-to-find-the-specified-info-neede.md)
 - ✔️ [3. Bash Script - Hard drive usage](Exercises/3-Bash-Script-Hard-drive-usage.md)
