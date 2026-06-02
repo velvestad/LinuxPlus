@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Trebuchet MS", "Comic Sans MS", sans-serif;
+    background:
+        radial-gradient(circle at top left, #fff48a 0, transparent 28%),
+        radial-gradient(circle at top right, #ff9bd2 0, transparent 24%),
+        radial-gradient(circle at bottom left, #88f7c5 0, transparent 25%),
+        linear-gradient(135deg, #ffb3c7, #ffd86f, #8fd6ff);
+}
+
+.menu-card {
+    width: min(90vw, 560px);
+    padding: 3rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.78);
+    border: 6px solid #ff6fb5;
+    border-radius: 32px;
+    box-shadow: 0 18px 0 #ff9f1c, 0 28px 45px rgba(214, 57, 142, 0.28);
+}
+
+h1 {
+    margin: 0;
+    color: #ff4f87;
+    font-size: clamp(2.5rem, 8vw, 4.8rem);
+    letter-spacing: 0.12em;
+    text-shadow: 3px 3px 0 #fff;
+}
+
+.date {
+    margin: 1rem 0 0;
+    color: #6a49ff;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.food {
+    margin: 1.4rem 0 0;
+    color: #0f8b8d;
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    font-weight: 800;
+}
