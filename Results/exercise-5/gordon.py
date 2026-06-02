@@ -47,8 +47,6 @@ try:
 
     lunch = get_lunch(response)
     date = get_date(response)
-    print(date)
-    print(lunch)
 
     with open("index.html", "r") as file:
         old_index = file.read()
