@@ -1,24 +1,9 @@
+## Script to fetch today's lunch menu from the UTB Nord website
+#  and update index.html with the new date and lunch information.
+
 # Importing necessary libraries
 import requests
 from bs4 import BeautifulSoup
-
-# I am looking for:
-"""
-<div class="lunch-wrapper"><h4> Dagens lunch i Övertorneå </h4>
-    <div class="lunch-wrapper__wrap">
-        <p>
-            " Tis. 02. 06 "
-            <br><strong>Gulaschgryta med kokt potatis</strong>
-        </p>
-    </div>
-    <a class="btn btn-primary" href="/sv/skolan/restaurang/a-la-carte-meny">
-        Till A la Carte Restaurangen
-    </a>
-    <a class="btn btn-primary" href="/sv/skolan/restaurang/lunchmeny-i-hedenaset">
-        Till Lunchmeny i Hedenäset
-    </a>
-</div>
-"""
 
 
 # Define the UTB Nord website URL
@@ -45,9 +30,11 @@ try:
             f"Error loading webpage, status code: {response.status_code}"
             )
 
+    # Extract lunch and date information
     lunch = get_lunch(response)
     date = get_date(response)
 
+    # Read the existing index.html file, update it with the new date and lunch information
     with open("index.html", "r") as file:
         old_index = file.read()
 
@@ -61,8 +48,6 @@ try:
     with open("index.html", "w") as file:
         file.write(new_index)
 
+# Error handling
 except Exception as e:
     print(f"Error: {str(e)}")
-
-
-# Put the information in a index.html file
