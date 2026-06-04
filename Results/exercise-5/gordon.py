@@ -24,7 +24,6 @@ def get_date(webresponse):
 try:
     # Fetch the webpage
     response = requests.get(url)
-    
     if response.status_code != 200:
         raise Exception(
             f"Error loading webpage, status code: {response.status_code}"
