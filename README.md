@@ -9,7 +9,6 @@ Current progress: 5/5 exercises completed.
 - ✔️ [3. Bash Script - Hard drive usage](Exercises/3-Bash-Script-Hard-drive-usage.md)
 - ✔️ [4. Bash script - Users from CSV & random 12 character password](Exercises/4-Bash-script-Users-from-CSV-&-random-12-character-password.md)
 - ✔️ [5. Python - Parse a web site for information](Exercises/5-Python-Parse-a-web-site-for-information.md)
-    Exercise 5 has a bug. If fetching the webpage fails, it will write an empty index.htlm, and break the webpage.
 
 ## Optional Labs
 Current progress: 0/5 exercises completed.
