@@ -44,6 +44,8 @@ try:
         new_index = old_index.replace(old_date, date)
         new_index = new_index.replace(old_lunch, lunch)
 
+### BUG: If webpage fecth fails, this will write an empty index.html file.
+###      Error handling should be added to prevent this.
     with open("index.html", "w") as file:
         file.write(new_index)
 
